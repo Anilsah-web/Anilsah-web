@@ -657,125 +657,10 @@
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             color: var(--accent);
         }
-
-        /* Tablet Styles */
-        @media (max-width: 768px) {
-            .nav-menu {
-                position: fixed;
-                left: -100%;
-                top: 70px;
-                flex-direction: column;
-                background: var(--gradient-metal);
-                width: 100%;
-                text-align: center;
-                transition: 0.3s;
-                box-shadow: var(--shadow);
-                padding: 2rem 0;
-            }
-
-            .nav-menu.active {
-                left: 0;
-            }
-
-            .hamburger {
-                display: flex;
-            }
-
-            .hamburger.active .bar:nth-child(2) {
-                opacity: 0;
-            }
-
-            .hamburger.active .bar:nth-child(1) {
-                transform: translateY(8px) rotate(45deg);
-            }
-
-            .hamburger.active .bar:nth-child(3) {
-                transform: translateY(-8px) rotate(-45deg);
-            }
-
-            .hero-container {
-                grid-template-columns: 1fr;
-                text-align: center;
-                gap: 2rem;
-            }
-
-            .hero-title {
-                font-size: 2.5rem;
-            }
-
-            .hero-buttons {
-                justify-content: center;
-            }
-
-            .image-container {
-                width: 300px;
-                height: 300px;
-            }
-
-            .facts {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-            }
-            
-            .fact {
-                padding: 1.5rem 1rem;
-            }
-            
-            .fact i {
-                font-size: 2rem;
-            }
-
-            .contact-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .footer-content {
-                flex-direction: column;
-                gap: 2rem;
-                text-align: center;
-            }
-        }
-
-        /* Mobile Styles */
-        @media (max-width: 480px) {
-            .hero-title {
-                font-size: 2rem;
-            }
-
-            .hero-subtitle {
-                font-size: 1.2rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .image-container {
-                width: 250px;
-                height: 250px;
-            }
-
-            .hero-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .btn {
-                width: 200px;
-            }
-        }
     </style>
 </head>
 <body>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -789,11 +674,6 @@
                 <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
                 <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
         </div>
     </nav>
 
@@ -973,6 +853,7 @@
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
             <div class="contact-content">
+
                 <div class="contact-info">
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
@@ -981,6 +862,7 @@
                             <p>anilsah4015@gmail.com</p>
                         </div>
                     </div>
+
                     <div class="contact-item">
                         <i class="fas fa-phone"></i>
                         <div>
@@ -988,5 +870,47 @@
                             <p>+91 8936806797</p>
                         </div>
                     </div>
-                    <div class
 
+                    <!-- ⭐ This was missing — now added exactly in your style -->
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Bhubaneswar, India</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ⭐ Completed Get In Touch Form -->
+                <div class="contact-form">
+                    <div class="form-group">
+                        <label>Your Name</label>
+                        <input type="text" placeholder="Enter your name">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Your Email</label>
+                        <input type="email" placeholder="Enter your email">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Subject</label>
+                        <input type="text" placeholder="Enter subject">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Your Message</label>
+                        <textarea rows="5" placeholder="Enter your message"></textarea>
+                    </div>
+
+                    <button class="btn btn-primary" style="width:180px;">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
